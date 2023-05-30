@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namastey React</title>
+
+</head>
+
+<body>
+    <!-- Hello World using html -->
+    <div id="root">
+        <h1>Hello World!</h1>
+    </div>
+
+    <!-- Hello World using JavaScript -->
+    <div id="root1"></div>
+    <script>
+        // Creating h1 element
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World from JavaScript!"
+
+        // Injecting const heading inside div#root1
+        const root = document.getElementById("root1");
+        root.appendChild(heading);
+    </script>
+
+    <!-- CDN Path for React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
