@@ -1,0 +1,12 @@
+{
+  "name": "namastey-react",
+  "version": "1.0.0",
+  "description": "This is namastey-react learning path",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Shilpi",
+  "license": "ISC"
+}
