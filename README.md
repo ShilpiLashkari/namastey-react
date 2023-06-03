@@ -1,4 +1,7 @@
 # namastey-react
 
-Namastey React
-My journey of learning React
+Namastey React 🙏
+
+Hi,
+
+This is my journey of learning React 🚀
