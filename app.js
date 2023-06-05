@@ -13,3 +13,9 @@ const FunctionalComponent = () => {
   return <h1>Hi There!</h1>;
 };
 const FunctionalComponent2 = () => <h1>Hi There!</h1>;
+
+const FunctionalComponent3 = () => (
+  <div id="container">
+    <h2 className="heading2">Hi Shilpi</h2>
+  </div>
+);
