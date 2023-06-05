@@ -8,3 +8,8 @@ const jsxHeading = (
 );
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(jsxHeading);
+
+const FunctionalComponent = () => {
+  return <h1>Hi There!</h1>;
+};
+const FunctionalComponent2 = () => <h1>Hi There!</h1>;
