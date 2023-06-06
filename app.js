@@ -19,3 +19,5 @@ const FunctionalComponent3 = () => (
     <h2 className="heading2">Hi Shilpi</h2>
   </div>
 );
+
+const rootComponent = ReactDOM.root(<FunctionalComponent3 />);
