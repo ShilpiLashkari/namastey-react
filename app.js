@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const FunctionalComponent = () => (
-  <div id="container">
-    <h2 className="heading2">Hi Shilpi</h2>
-  </div>
-);
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <h1 className="mainHeading">Heading</h1>
+    </div>
+  );
+};
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const rootComponent = ReactDOM.root(document.getElementById("root"));
-rootComponent.render(<FunctionalComponent />);
+root.render(<HeadingComponent />);
