@@ -7,5 +7,5 @@ const FunctionalComponent = () => (
   </div>
 );
 
-const rootComponent = ReactDOM.root(document.getElementById("container"));
+const rootComponent = ReactDOM.root(document.getElementById("root"));
 rootComponent.render(<FunctionalComponent />);
