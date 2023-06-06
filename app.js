@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const HeadingComponent = () => {
+const TitleComponent = () => {
+  return <h1 className="title">Namastey React </h1>;
+};
+
+const MainComponent = () => {
   return (
     <div id="container">
-      <h1 className="mainHeading">Heading</h1>
+      <TitleComponent />
+      <h2 className="mainHeading">Hi There! This is heading 2.</h2>
     </div>
   );
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<MainComponent />);
