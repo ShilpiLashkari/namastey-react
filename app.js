@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+const parentReactElement = <p>This is parent react element!!!! 😎</p>;
 const reactElement = (
   <div>
     <p>Some text inside a react element rendering in MainComponent</p>
+    <div>{parentReactElement}</div>
   </div>
 );
 const TitleComponent = () => <h1 className="title">Namastey React </h1>;
@@ -17,7 +19,7 @@ const MainComponent = () => (
     <h3>{number}</h3>
     <h4>{120 + 50}</h4>
     <h5>{console.log("Hii")}</h5>
-    <h6>{reactElement}</h6>
+    <h3>{reactElement}</h3>
   </div>
 );
 const root = ReactDOM.createRoot(document.getElementById("root"));
