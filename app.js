@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parentReactElement = <p>This is parent react element!!!! 😎</p>;
 const reactElement = (
   <div>
     <p>Some text inside a react element rendering in MainComponent</p>
     <div>{parentReactElement}</div>
+    <TitleComponent />
   </div>
 );
 const TitleComponent = () => <h1 className="title">Namastey React </h1>;
