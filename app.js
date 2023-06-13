@@ -23,8 +23,3 @@ const MainComponent = () => (
   </div>
 );
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<MainComponent />);
-
-console.log("type 1:", typeof reactElement);
-console.log("type 2:", typeof MainComponent);
