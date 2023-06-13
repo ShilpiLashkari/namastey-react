@@ -10,7 +10,7 @@ const reactElement = (
 );
 const TitleComponent = () => <h1 className="title">Namastey React </h1>;
 
-const number = 120;
+const n = 120;
 
 const MainComponent = () => (
   <div id="container">
