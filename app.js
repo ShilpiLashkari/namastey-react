@@ -11,6 +11,7 @@ const reactElement = (
 const TitleComponent = () => <h1 className="title">Namastey React </h1>;
 
 const number = 1221;
+
 const MainComponent = () => (
   <div id="container">
     <TitleComponent />
