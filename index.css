@@ -19,3 +19,20 @@
   font-size: 24px;
   margin: 10px;
 }
+
+.body {
+  margin: 10px 0px;
+}
+.search-btn {
+  margin: 0px 8px;
+  cursor: pointer;
+}
+.res-container {
+  margin: 10px 0px;
+}
+.res-card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 0px 20px;
+}
