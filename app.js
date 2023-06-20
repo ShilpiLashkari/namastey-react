@@ -21,11 +21,14 @@ const Header = () => {
 const RestaurantCard = () => {
   return (
     <div className="res-card">
+      <img alt="res-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGjQBaWIt-hJleKCUBrxoZXC0yeYgdeKMXYsq-7SSjv7VVP4LCpsmnkVrDzfRBNh-PW4&usqp=CAU" className="res-logo" />
       <h3>Biryani By Kilo</h3>
-    </div>
+      <h4>Biryani, North Indian, Asian</h4>
+      <h4>4.4 stars</h4>
+      <h4>36 minutes</h4>
+    </div >
   );
 }
-
 
 const Body = () => {
   return (
@@ -36,8 +39,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         <RestaurantCard />
+        <RestaurantCard />
       </div>
-    </div>
+    </div >
   )
 }
 
