@@ -18,14 +18,16 @@ const Header = () => {
     </div>
   )
 }
-const RestaurantCard = () => {
+
+const RestaurantCard = (props) => {
+  const { resImg, resName, cuisine, ratings, deliveryTime } = props
   return (
     <div className="res-card">
-      <img alt="res-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGjQBaWIt-hJleKCUBrxoZXC0yeYgdeKMXYsq-7SSjv7VVP4LCpsmnkVrDzfRBNh-PW4&usqp=CAU" className="res-logo" />
-      <h3>Biryani By Kilo</h3>
-      <h4>Biryani, North Indian, Asian</h4>
-      <h4>4.4 stars</h4>
-      <h4>36 minutes</h4>
+      <img alt="res-logo" src={props.resImg} className="res-logo" />
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
+      <h4>{props.ratings}</h4>
+      <h4>{props.deliveryTime}</h4>
     </div >
   );
 }
@@ -38,8 +40,8 @@ const Body = () => {
         <button className="search-btn">Search</button>
       </div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard resImg="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGjQBaWIt-hJleKCUBrxoZXC0yeYgdeKMXYsq-7SSjv7VVP4LCpsmnkVrDzfRBNh-PW4&usqp=CAU" resName="Biryani By Kilo" cuisine="Biryani, North Indian, Asian" ratings="4.4 stars" deliveryTime="25 minutes" />
+        <RestaurantCard resImg="https://fox56news.com/wp-content/uploads/sites/24/2023/03/Kentucky_Fried_Chicken_Nuggets-e1679584687139.jpg?w=480&h=294&crop=1" resName="KFC" cuisine="Burger, Fast Foods" ratings="4.0 stars" deliveryTime="16 minutes" />
       </div>
     </div >
   )
