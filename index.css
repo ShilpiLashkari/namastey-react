@@ -1,3 +1,6 @@
+#root {
+  background-color: #fff;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -28,11 +31,23 @@
   cursor: pointer;
 }
 .res-container {
-  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .res-card {
+  margin: 5px;
   width: 200px;
   height: 300px;
-  border: 1px solid black;
-  padding: 0px 20px;
+  background-color: #fff;
+  padding: 15px;
+}
+.res-card:hover {
+  cursor: pointer;
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgba(218, 220, 230, 0.6);
+}
+.res-logo {
+  width: 100%;
 }
