@@ -30,6 +30,10 @@
   margin: 0px 8px;
   cursor: pointer;
 }
+.filter-btn {
+  cursor: pointer;
+  margin: 10px;
+}
 .res-container {
   display: flex;
   flex-direction: row;
