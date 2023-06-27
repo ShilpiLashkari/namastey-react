@@ -1,9 +1,9 @@
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
-import MockData from "../utils/MockData";
+import resList from "../utils/MockData";
 
 const Body = () => {
-  let [listOfRestaurants, setListOfRestaurants] = useState(MockData);
+  let [listOfRestaurants, setListOfRestaurants] = useState(resList);
   const handleTopRated = () => {
     const filterList = listOfRestaurants.filter(
       (res) => res.data.avgRating > 4
