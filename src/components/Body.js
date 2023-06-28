@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-
+import Shimmer from "./Shimmer";
 const Body = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
   const handleTopRated = () => {
@@ -14,12 +14,15 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    setListOfRestaurants(json.data.cards[2].data.data.cards);
+    setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   };
   useEffect(() => {
     fetchData();
   }, []);
-  return (
+  // Conditional Rendering
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="search-container">
         <button className="filter-btn" onClick={handleTopRated}>
