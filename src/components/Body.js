@@ -24,7 +24,15 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="search-container">
+      <div className="filter-container">
+        <div className="search-container">
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Search by name.."
+          />
+          <button className="search-btn">Search</button>
+        </div>
         <button className="filter-btn" onClick={handleTopRated}>
           Top Rated Restaurant
         </button>

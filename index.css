@@ -43,13 +43,33 @@
 .body {
   margin: 10px 0px;
 }
-.search-btn {
-  margin: 0px 8px;
+.filter-container {
+  display: flex;
   cursor: pointer;
 }
-.filter-btn {
+.search-container {
+  margin: 0px 10px 0px 4px;
+}
+.search-bar {
+  border-radius: 2px;
+  border: 1px solid #c4623d;
+}
+.search-btn {
+  margin-left: 10px;
+  background-color: #fff;
+  color: #c4623d;
+  border: 1px solid #c4623d;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 5px 15px;
+  transition: all 0.4s;
+}
+.search-btn:hover {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #c4623d;
+  color: #fff;
   cursor: pointer;
-  margin: 10px;
 }
 .res-container {
   display: flex;
