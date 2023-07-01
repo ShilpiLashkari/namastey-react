@@ -39,7 +39,9 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button className="filter-btn" onClick={handleTopRated}></button>
+        <button className="filter-btn" onClick={handleTopRated}>
+          Top Rated Restaurant
+        </button>
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
