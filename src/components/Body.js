@@ -40,7 +40,7 @@ const Body = () => {
           </button>
         </div>
         <button className="filter-btn" onClick={handleTopRated}>
-          Top Rated Restaurant
+          {/* Top Rated Restaurant */}
         </button>
       </div>
       <div className="res-container">
