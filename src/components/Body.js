@@ -19,7 +19,6 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  // Conditional Rendering
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -31,11 +30,16 @@ const Body = () => {
             type="text"
             placeholder="Search by name.."
           />
-          <button className="search-btn">Search</button>
+          <button
+            className="search-btn"
+            onClick={() => {
+              // Filter the restaurant card and update the UI
+            }}
+          >
+            Search
+          </button>
         </div>
-        <button className="filter-btn" onClick={handleTopRated}>
-          Top Rated Restaurant
-        </button>
+        <button className="filter-btn" onClick={handleTopRated}></button>
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
