@@ -30,7 +30,12 @@ const Body = () => {
             type="text"
             placeholder="Search by name.."
           />
-          <button className="search-btn" onClick={() => {}}>
+          <button
+            className="search-btn"
+            onClick={() => {
+              // Filter the restaurant card and update the UI
+            }}
+          >
             Search
           </button>
         </div>
