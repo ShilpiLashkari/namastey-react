@@ -2,12 +2,20 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 const Body = () => {
-  let [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filteredRestaurant, setfilteredRestaurant] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const handleTopRated = () => {
     const filterList = listOfRestaurants.filter(
       (res) => res.data.avgRating > 4
     );
     setListOfRestaurants(filterList);
+  };
+  const onChangeSearchText = () => {
+    const filteredRestaurant = listOfRestaurants.filter((restaurant) =>
+      restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setfilteredRestaurant(filteredRestaurant);
   };
   const fetchData = async () => {
     const data = await fetch(
@@ -15,6 +23,7 @@ const Body = () => {
     );
     const json = await data.json();
     setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setfilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   };
   useEffect(() => {
     fetchData();
@@ -29,13 +38,12 @@ const Body = () => {
             className="search-bar"
             type="text"
             placeholder="Search by name.."
-          />
-          <button
-            className="search-btn"
-            onClick={() => {
-              // Filter the restaurant card and update the UI
+            value={searchText}
+            onChange={(event) => {
+              setSearchText(event.target.value);
             }}
-          >
+          />
+          <button className="search-btn" onClick={onChangeSearchText}>
             Search
           </button>
         </div>
@@ -44,7 +52,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.data.id} resData={restaurant} />
         ))}
       </div>
