@@ -3,8 +3,6 @@ import { LOGO_URL } from "../utils/constants";
 
 const Header = () => {
   let [btnName, setBtnName] = useState(["Login"]);
-  useEffect(() => {}, []);
-
   return (
     <div className="header">
       <div className="logo-container">
