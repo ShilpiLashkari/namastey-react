@@ -14,7 +14,7 @@ const AppLayout = () => {
 };
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/", //If homepage
     element: <AppLayout />,
   },
   {
