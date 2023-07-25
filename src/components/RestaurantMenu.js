@@ -17,5 +17,6 @@ const RestaurantMenu = () => {
             <h1>Name: {name}</h1>
             <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
         </div>)
+
 }
 export default RestaurantMenu;
