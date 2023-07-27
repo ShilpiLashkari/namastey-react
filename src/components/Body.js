@@ -13,8 +13,6 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log("Final list::", json.data.cards);
-
     setListOfRestraunt(
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -43,9 +41,9 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              const filteredRestaurant = listOfRestaurants.filter((res) => {
-                res.info.name.toLowerCase().includes(searchText.toLowerCase());
-              });
+              const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
@@ -58,7 +56,9 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4
             );
-            setListOfRestraunt(filteredList);
+            console.log("filteredList:::", filteredList);
+            // setListOfRestraunt(filteredList);
+            setFilteredRestaurant(filteredList);
           }}
         >
           Top Rated Restaurant
