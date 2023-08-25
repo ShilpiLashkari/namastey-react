@@ -47,7 +47,7 @@ const Body = () => {
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
-            Search
+            Search here
           </button>
         </div>
         <button
