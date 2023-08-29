@@ -47,7 +47,7 @@ const Body = () => {
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
-            Search Here
+            Search
           </button>
         </div>
         <button
@@ -61,7 +61,7 @@ const Body = () => {
             setFilteredRestaurant(filteredList);
           }}
         >
-          Top Rated Restaurants
+          Top Rated Restaurant
         </button>
       </div>
       <div className="res-container">
