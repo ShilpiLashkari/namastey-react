@@ -20,7 +20,7 @@ class UserClass extends React.Component {
               });
             }}
           >
-            Count Increases
+            Count Increase
           </button>
         </div>
         <h2>Name: {nameOfPerson}</h2>
