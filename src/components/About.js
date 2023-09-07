@@ -7,11 +7,11 @@ const About = () => {
       <h2>This is namastey react</h2>
       <div>
         <p>Functional Component</p>
-        <User
+        {/* <User
           nameOfPerson={"Shilpu (function)"}
           locationOfPerson={"Noida (Funtion)"}
           emailOfPerson={"shilpilashkari@gmail.com"}
-        />
+        /> */}
         <p>Class Based Component</p>
         <UserClass
           nameOfPerson={"Shelly (class)"}
