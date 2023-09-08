@@ -56,7 +56,6 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4
             );
-            console.log("filteredList:::", filteredList);
             // setListOfRestraunt(filteredList);
             setFilteredRestaurant(filteredList);
           }}
