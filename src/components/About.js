@@ -14,10 +14,11 @@ const About = () => {
         /> */}
         <p>Class Based Component</p>
         <UserClass
-          nameOfPerson={"Shelly (class)"}
-          locationOfPerson={"Noida (Class)"}
+          nameOfPerson={"Shelly (Class A)"}
+          locationOfPerson={"Noida (Class A)"}
           emailOfPerson={"shilpilashkari@gmail.com"}
         />
+        <br />
       </div>
     </div>
   );
