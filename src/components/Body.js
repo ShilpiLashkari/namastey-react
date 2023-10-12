@@ -22,7 +22,6 @@ const Body = () => {
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  console.log("listOfRestaurants", listOfRestaurants);
   useEffect(() => {
     fetchData();
   }, []);
