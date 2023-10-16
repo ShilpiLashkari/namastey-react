@@ -46,6 +46,7 @@ const RestaurantMenu = () => {
       </p>
       {categories.map((category, index) => {
         const isSectionExpanded = showIndex === index;
+        debugger;
         return (
           <RestaurantCategory
             key={category?.card?.card?.title}
