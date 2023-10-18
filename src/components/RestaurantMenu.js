@@ -7,7 +7,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
   const [showIndex, setShowIndex] = useState(null);
-
+  const dummy = "Dummy Data";
   if (resInfo === null) return <Shimmer />;
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[0]?.card?.card?.info;
@@ -46,13 +46,13 @@ const RestaurantMenu = () => {
       </p>
       {categories.map((category, index) => {
         const isSectionExpanded = showIndex === index;
-        debugger;
         return (
           <RestaurantCategory
             key={category?.card?.card?.title}
             data={category.card.card}
             showItems={isSectionExpanded}
             setShowIndex={() => setShowIndex(isSectionExpanded ? null : index)}
+            dummy={dummy}
           />
         );
       })}
