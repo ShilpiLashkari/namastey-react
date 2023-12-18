@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex, dummy }) => {
   const handleClick = () => {
-    return setShowIndex();
+    setShowIndex();
   };
   return (
     <div>
@@ -19,7 +19,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex, dummy }) => {
           <span>⬇️</span>
         </div>
 
-        {showItems && <ItemList items={data.itemCards} dummy="dummy" />}
+        {showItems && <ItemList items={data.itemCards} dummy={dummy} />}
       </div>
     </div>
   );
