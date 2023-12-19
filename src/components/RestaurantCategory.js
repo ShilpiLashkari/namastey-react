@@ -14,6 +14,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex, dummy }) => {
       >
         <div className="flex justify-between">
           <span className="font-bold text-lg">
+            --
             {data.title} ({data.itemCards?.length})
           </span>
           <span>⬇️</span>
