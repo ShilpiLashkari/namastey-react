@@ -6,6 +6,7 @@ const ItemList = ({ items, dummy }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItem(item));
+    console.log("Items:::", item);
   };
   return (
     <div>
@@ -30,7 +31,7 @@ const ItemList = ({ items, dummy }) => {
             <div className="absolute">
               <button
                 className="p-2 bg-stone-950 text-white shadow-lg mx-16 rounded-lg"
-                onClick={() => handleAddItem()}
+                onClick={() => handleAddItem(item)}
               >
                 Add +
               </button>
