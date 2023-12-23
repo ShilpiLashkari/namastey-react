@@ -6,7 +6,6 @@ const ItemList = ({ items, dummy }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItem(item));
-    console.log("Items:::", item);
   };
   return (
     <div>
