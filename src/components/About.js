@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <h2>This is namastey react seriess</h2>
+      <h2>This is namastey react ser</h2>
       <div>
         <p>Functional Component</p>
         {/* <User
