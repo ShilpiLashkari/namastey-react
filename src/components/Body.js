@@ -17,10 +17,10 @@ const Body = () => {
     );
     const json = await data.json();
     setListOfRestraunt(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   useEffect(() => {
@@ -33,7 +33,7 @@ const Body = () => {
   <h1>Looks like you're offline!! Please check your internet connection</h1>;
 
   const { loggedInUser, setUserName } = useContext(UserContext);
-  return listOfRestaurants.length === 0 ? (
+  return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -84,7 +84,7 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container flex flex-wrap">
-        {filteredRestaurant.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant?.info.id}
             to={"/restaurants/" + restaurant?.info.id}
