@@ -44,6 +44,7 @@ const Body = () => {
             type="text"
             placeholder="Search by name.."
             value={searchText}
+            data-testid="searchInput"
             onChange={(event) => {
               setSearchText(event.target.value);
             }}
