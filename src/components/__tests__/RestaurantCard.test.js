@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import RestaurantCard, { isOpenOrNOt } from "../RestaurantCard";
+import RestaurantCard from "../RestaurantCard";
 import MOCK_DATA from "../../components/mocks/resCardMock.json";
 import "@testing-library/jest-dom";
 
