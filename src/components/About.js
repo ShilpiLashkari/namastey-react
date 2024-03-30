@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h1>About</h1>
       <h2>This is namastey react 
-      
+      dfsdfsdfsdf
         </h2>
       <div>
         <p>Functional Component</p>
