@@ -9,10 +9,6 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   const dummy = "Dummy Data";
   if (resInfo === null) return <Shimmer />;
-  console.log(
-    "resInfo:::",
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card.card
-  );
 
   const { name, cuisines, costForTwoMessage } =
     resInfo.cards[2]?.card?.card.info;
