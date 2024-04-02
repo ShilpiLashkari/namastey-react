@@ -9,14 +9,19 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   const dummy = "Dummy Data";
   if (resInfo === null) return <Shimmer />;
+  console.log(
+    "resInfo:::",
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card.card
+  );
+
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[0]?.card?.card?.info;
+    resInfo.cards[2]?.card?.card.info;
 
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card.card;
 
   const categories =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" ||
@@ -25,20 +30,21 @@ const RestaurantMenu = () => {
     );
 
   return (
-    // <div className="menu">
-    //   <h1>Welcome To {name} </h1>
-    //   <p> {cuisines.join(", ")}</p>
-    //   <h3>{costForTwoMessage}</h3>
-    //   <ul>
-    //     {itemCards.map((item) => (
-    //       <li key={item.card.info.id}>
-    //         {" "}
-    //         {item.card.info.name} for ₹{" "}
-    //         {(item.card.info.price || item.card.info.defaultPrice) / 100}
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
+    /* <div className="menu">
+       <h1>Welcome To {name} </h1>
+       <p> {cuisines.join(", ")}</p>
+       <h3>{costForTwoMessage}</h3>
+       <ul>
+         {itemCards.map((item) => (
+           <li key={item.card.info.id}>
+             {" "}
+             {item.card.info.name} for ₹{" "}
+             {(item.card.info.price || item.card.info.defaultPrice) / 100}
+           </li>
+         ))}
+       </ul>
+     </div>
+     */
     <div className="text-center ">
       <h1 className="font-bold my-6 text-2xl">{name}</h1>
       <p className="font-bold">
